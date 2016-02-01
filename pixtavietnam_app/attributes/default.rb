@@ -1,6 +1,10 @@
 # develop
-default[:pixtavietnam_app][:ftp][:development][:original_bucket_jp] = "pixtavietnam-upload-develop-jp"
-default[:pixtavietnam_app][:ftp][:development][:mirror_bucket_jp] = "pixtavietnam-upload-develop-mirror-jp"
+default[:pixtavietnam_app][:ftp][:development][:bucket_groups] = {
+  jp: {
+    original_bucket: "pixtavietnam-upload-develop-jp",
+    mirror_bucket: "pixtavietnam-upload-develop-mirror-jp"
+  }
+}
 default[:pixtavietnam_app][:ftp][:development][:thumbnail_bucket] = "pixta-image-thumb-awsimport-jp-develop"
 default[:pixtavietnam_app][:ftp][:development][:illustration_files_api_url] = "http://dev-app02.pixtavietnam.com:3000/api/v2/illustration_files"
 default[:pixtavietnam_app][:ftp][:development][:footage_files_api_url] = "http://dev-app02.pixtavietnam.com:3000/api/v2/footage_files"
@@ -9,8 +13,12 @@ default[:pixtavietnam_app][:ftp][:development][:convert_png_to_jpg_queue_name] =
 default[:pixtavietnam_app][:ftp][:development][:convert_png_to_jpg_queue_region] = "ap-southeast-1"
 
 # staging
-default[:pixtavietnam_app][:ftp][:staging][:original_bucket_jp] = "pixtavietnam-upload-test-jp"
-default[:pixtavietnam_app][:ftp][:staging][:mirror_bucket_jp] = "pixtavietnam-upload-test-mirror-jp"
+default[:pixtavietnam_app][:ftp][:staging][:bucket_groups] = {
+  jp: {
+    original_bucket: "pixtavietnam-upload-test-jp",
+    mirror_bucket: "pixtavietnam-upload-test-mirror-jp"
+  }
+}
 default[:pixtavietnam_app][:ftp][:staging][:thumbnail_bucket] = "pixta-image-thumb-awsimport-jp-devel"
 default[:pixtavietnam_app][:ftp][:staging][:illustration_files_api_url] = "http://52.74.0.70/api/v2/illustration_files"
 default[:pixtavietnam_app][:ftp][:staging][:footage_files_api_url] = "http://52.74.0.70/api/v2/footage_files"
@@ -19,14 +27,24 @@ default[:pixtavietnam_app][:ftp][:staging][:convert_png_to_jpg_queue_name] = "st
 default[:pixtavietnam_app][:ftp][:staging][:convert_png_to_jpg_queue_region] = "ap-southeast-1"
 
 # production
-default[:pixtavietnam_app][:ftp][:production][:original_bucket_jp] = "pixtavietnam-upload-develop-jp"
-default[:pixtavietnam_app][:ftp][:production][:original_bucket_eu] = "pixtavietnam-upload-develop-eu"
-default[:pixtavietnam_app][:ftp][:production][:original_bucket_uswest] = "pixtavietnam-upload-develop-uswest"
-default[:pixtavietnam_app][:ftp][:production][:original_bucket_useast] = "pixtavietnam-upload-develop-useast"
-default[:pixtavietnam_app][:ftp][:production][:mirror_bucket_jp] = "pixtavietnam-upload-develop-mirror-jp"
-default[:pixtavietnam_app][:ftp][:production][:mirror_bucket_eu] = "pixtavietnam-upload-develop-mirror-eu"
-default[:pixtavietnam_app][:ftp][:production][:mirror_bucket_uswest] = "pixtavietnam-upload-develop-mirror-uswest"
-default[:pixtavietnam_app][:ftp][:production][:mirror_bucket_useast] = "pixtavietnam-upload-develop-mirror-useast"
+default[:pixtavietnam_app][:ftp][:staging][:bucket_groups] = {
+  jp: {
+    original_bucket: "pixtavietnam-upload-develop-jp",
+    mirror_bucket: "pixtavietnam-upload-develop-mirror-jp"
+  },
+  eu: {
+    original_bucket: "pixtavietnam-upload-develop-eu",
+    mirror_bucket: "pixtavietnam-upload-develop-mirror-eu"
+  },
+  uswest: {
+    original_bucket: "pixtavietnam-upload-develop-uswest",
+    mirror_bucket: "pixtavietnam-upload-develop-mirror-uswest"
+  },
+  useast: {
+    original_bucket: "pixtavietnam-upload-develop-useast",
+    mirror_bucket: "pixtavietnam-upload-develop-mirror-useast"
+  }
+}
 default[:pixtavietnam_app][:ftp][:production][:thumbnail_bucket] = "pixta-image-thumb-awsimport-jp"
 default[:pixtavietnam_app][:ftp][:production][:illustration_files_api_url] = "https://api.pixta.jp/v2/illustration_files"
 default[:pixtavietnam_app][:ftp][:production][:footage_files_api_url] = "https://api.pixta.jp/v2/footage_files"

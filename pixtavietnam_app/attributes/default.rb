@@ -27,22 +27,22 @@ default[:pixtavietnam_app][:ftp][:staging][:convert_png_to_jpg_queue_name] = "st
 default[:pixtavietnam_app][:ftp][:staging][:convert_png_to_jpg_queue_region] = "ap-southeast-1"
 
 # production
-default[:pixtavietnam_app][:ftp][:staging][:bucket_groups] = {
+default[:pixtavietnam_app][:ftp][:production][:bucket_groups] = {
   jp: {
-    original_bucket: "pixtavietnam-upload-develop-jp",
-    mirror_bucket: "pixtavietnam-upload-develop-mirror-jp"
+    original_bucket: "pixtavietnam-upload-jp",
+    mirror_bucket: "pixtavietnam-upload-mirror-jp"
   },
   eu: {
-    original_bucket: "pixtavietnam-upload-develop-eu",
-    mirror_bucket: "pixtavietnam-upload-develop-mirror-eu"
+    original_bucket: "pixtavietnam-upload-eu",
+    mirror_bucket: "pixtavietnam-upload-mirror-eu"
   },
   uswest: {
-    original_bucket: "pixtavietnam-upload-develop-uswest",
-    mirror_bucket: "pixtavietnam-upload-develop-mirror-uswest"
+    original_bucket: "pixtavietnam-upload-uswest",
+    mirror_bucket: "pixtavietnam-upload-mirror-uswest"
   },
   useast: {
-    original_bucket: "pixtavietnam-upload-develop-useast",
-    mirror_bucket: "pixtavietnam-upload-develop-mirror-useast"
+    original_bucket: "pixtavietnam-upload-useast",
+    mirror_bucket: "pixtavietnam-upload-mirror-useast"
   }
 }
 default[:pixtavietnam_app][:ftp][:production][:thumbnail_bucket] = "pixta-image-thumb-awsimport-jp"

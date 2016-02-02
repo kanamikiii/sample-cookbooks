@@ -1,0 +1,4 @@
+check process ConvertPNGtoJPG matching "Pixta::Workers::PngToJpg.execute"
+  start program = "/bin/su - <%= @deploy_user %> -c 'cd <%= @current_path %> && ITEM_SUBMIT_ACCESS_TOKEN=<%= @access_token %> ACCESS_KEY_ID=<%= @access_key %> SECRET_ACCESS_KEY=<%= @secret_key %> DEPLOY_ENV=<%= @deploy_env %> bundle exec ruby lib/pixta/script/start_png_to_jpg_worker.rb &'"
+  stop program = "/usr/bin/pkill -f Pixta::Workers::PngToJpg.execute"
+  if not exist for 2 cycles then restart

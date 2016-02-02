@@ -10,7 +10,6 @@ default[:pixtavietnam_app][:ftp][:development][:illustration_files_api_url] = "h
 default[:pixtavietnam_app][:ftp][:development][:footage_files_api_url] = "http://dev-app02.pixtavietnam.com:3000/api/v2/footage_files"
 default[:pixtavietnam_app][:ftp][:development][:photo_files_api_url] = "http://dev-app02.pixtavietnam.com:3000/api/v2/photo_files"
 default[:pixtavietnam_app][:ftp][:development][:convert_png_to_jpg_queue_name] = "develop_png_to_jpg"
-default[:pixtavietnam_app][:ftp][:development][:convert_png_to_jpg_queue_region] = "ap-southeast-1"
 
 # staging
 default[:pixtavietnam_app][:ftp][:staging][:bucket_groups] = {
@@ -24,7 +23,6 @@ default[:pixtavietnam_app][:ftp][:staging][:illustration_files_api_url] = "http:
 default[:pixtavietnam_app][:ftp][:staging][:footage_files_api_url] = "http://52.74.0.70/api/v2/footage_files"
 default[:pixtavietnam_app][:ftp][:staging][:photo_files_api_url] = "http://52.74.0.70/api/v2/photo_files"
 default[:pixtavietnam_app][:ftp][:staging][:convert_png_to_jpg_queue_name] = "staging_png_to_jpg"
-default[:pixtavietnam_app][:ftp][:staging][:convert_png_to_jpg_queue_region] = "ap-southeast-1"
 
 # production
 default[:pixtavietnam_app][:ftp][:production][:bucket_groups] = {
@@ -50,4 +48,3 @@ default[:pixtavietnam_app][:ftp][:production][:illustration_files_api_url] = "ht
 default[:pixtavietnam_app][:ftp][:production][:footage_files_api_url] = "https://api.pixta.jp/v2/footage_files"
 default[:pixtavietnam_app][:ftp][:production][:photo_files_api_url] = "https://api.pixta.jp/v2/photo_files"
 default[:pixtavietnam_app][:ftp][:production][:convert_png_to_jpg_queue_name] = "prod_png_to_jpg"
-default[:pixtavietnam_app][:ftp][:production][:convert_png_to_jpg_queue_region] = "ap-southeast-1"
